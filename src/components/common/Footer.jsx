@@ -7,7 +7,6 @@ export function Footer() {
 		</footer>
 	);
 }
-
 export function Footer2() {
 	return (
 		<footer>
