@@ -7,10 +7,3 @@ export function Footer() {
 		</footer>
 	);
 }
-export function Footer2() {
-	return (
-		<footer>
-			<h1>footer2</h1>
-		</footer>
-	);
-}
