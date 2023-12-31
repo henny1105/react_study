@@ -1,7 +1,12 @@
 .header {
 	width: 100%;
-	height: 100px;
 	background: lightblue;
+
+	h1 {
+		font: bold 3rem/1.5 'arial';
+		color: #111;
+		margin-bottom: 2rem;
+	}
 
 	ul li {
 		a {

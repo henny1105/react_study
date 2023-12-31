@@ -9,10 +9,14 @@ export default function Header() {
 			</h1>
 			<ul>
 				<li>
-					<NavLink to='/department'>Department</NavLink>
+					<NavLink to='/department' activeClassName={styles.active}>
+						Department
+					</NavLink>
 				</li>
 				<li>
-					<NavLink to='/youtube'>Youtube</NavLink>
+					<NavLink to='/youtube' activeClassName={styles.active}>
+						Youtube
+					</NavLink>
 				</li>
 			</ul>
 		</header>
