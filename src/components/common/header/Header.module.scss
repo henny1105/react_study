@@ -1,3 +1,5 @@
+@import '/src/styles/Variables';
+
 .header {
 	width: 100%;
 	padding: 5vh 10vw;
@@ -9,6 +11,10 @@
 	h1 {
 		font: bold 2rem/1 'arial';
 		color: #333;
+
+		a {
+			color: inherit;
+		}
 	}
 
 	ul {
@@ -16,6 +22,8 @@
 		gap: 4rem;
 
 		li {
+			display: flex;
+			align-items: center;
 			a {
 				font: bold 1rem/1.5 'arial';
 				color: #999;
@@ -24,6 +32,16 @@
 					color: #333;
 				}
 			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.header {
+		padding: 3vh 10vw;
+
+		ul {
+			display: none;
 		}
 	}
 }

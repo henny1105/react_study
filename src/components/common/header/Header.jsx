@@ -29,7 +29,7 @@ export default function Header() {
 					</NavLink>
 				</li>
 				<li>
-					<NavLink to='/location' activeClassName={styles.active}>
+					<NavLink to='/contact' activeClassName={styles.active}>
 						Location
 					</NavLink>
 				</li>

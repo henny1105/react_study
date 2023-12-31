@@ -3,10 +3,8 @@ import styles from './Department.module.scss';
 
 export default function Department() {
 	return (
-		<section className={styles.department}>
-			<Layout title={'Department'}>
-				<h2>Department 전용 컨텐츠가 올자리</h2>
-			</Layout>
-		</section>
+		<Layout title={'Department'} className={styles.department}>
+			<p>부서소개 페이지 전용 컨텐츠가 올자리</p>
+		</Layout>
 	);
 }
