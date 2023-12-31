@@ -18,6 +18,21 @@ export default function Header() {
 						Youtube
 					</NavLink>
 				</li>
+				<li>
+					<NavLink to='/gallery' activeClassName={styles.active}>
+						Gallery
+					</NavLink>
+				</li>
+				<li>
+					<NavLink to='/members' activeClassName={styles.active}>
+						Members
+					</NavLink>
+				</li>
+				<li>
+					<NavLink to='/location' activeClassName={styles.active}>
+						Location
+					</NavLink>
+				</li>
 			</ul>
 		</header>
 	);
