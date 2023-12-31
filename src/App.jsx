@@ -10,17 +10,9 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Route exact path='/'>
-				<Main />
-			</Route>
-
-			<Route path='/department'>
-				<Department />
-			</Route>
-
-			<Route path='/youtube'>
-				<Youtube />
-			</Route>
+			<Route exact path='/' component={Main} />
+			<Route path='/department' component={Department} />
+			<Route path='/youtube' component={Youtube} />
 			<Footer />
 		</>
 	);
