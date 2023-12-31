@@ -5,7 +5,7 @@ import Header from './components/common/header/Header';
 function App() {
 	return (
 		<>
-			<Header />
+			<Header isMain={true} abc={'hello'} />
 			<Footer />
 		</>
 	);
