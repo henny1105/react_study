@@ -8,9 +8,11 @@ export default function Department() {
 
 	return (
 		<Layout title={'Department'}>
-			<button onClick={() => setOpen(true)}>open</button>
-			{/* button을 클릭했을 때 setOpen 함수를 호출하여 
-			Open 상태를 true로 설정함 */}
+			<button onClick={() => setOpen(!Open)}>{Open ? 'close' : 'open'}</button>
+			{/* Open이 true일 경우 !Open은 false가 되고 Open이 false일 경우
+			!Open은 true가 됨
+			Open 상태에 따라서 close 또는 open 텍스트 표기
+			*/}
 			{Open && <Modal />}
 			{/* Open 상태가 true일 때만 Modal 컴포넌트를 랜더링함
 			조건부 렌더링으로 모달을 필요에 따라 표시하거나 숨길 수 있음 */}
