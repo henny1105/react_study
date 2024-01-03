@@ -6,9 +6,11 @@ export default function Modal() {
 	// setNum 함수는 Num의 값을 업데이트 / 초기값 0
 	useEffect(() => {
 		console.log('컴포넌트 마운트시 한번만 호출');
+		document.body.style.overflow = 'hidden';
 
 		return () => {
 			console.log('컴포넌트 언마운트시 호출');
+			document.body.style.overflow = 'auto';
 		};
 	}, []);
 
