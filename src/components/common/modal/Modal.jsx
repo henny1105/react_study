@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 export default function Modal() {
 	const [Num, setNum] = useState(0);
-	// setNum 함수는 Num의 값을 업데이트 / 초기값 0
+
 	useEffect(() => {
 		console.log('컴포넌트 마운트시 한번만 호출');
 		document.body.style.overflow = 'hidden';
@@ -44,5 +44,21 @@ export default function Modal() {
   -- useEffect의 의존성배열을 비운상태에서 함수를 리턴
   -실사례1 : 팝업제거시 스크롤바 다시 생성
   -실사례2 : 윈도우 전역객체에 이벤트를 제거해야 될떄
+
+  React의 스크립트 파일은 2가지의 종류
+  - component
+  --- JSX리턴
+
+  - hook
+  --- 자주쓰는 특정 값이나 함수를 리턴
+
+  - custom hook
+  --- 사용자 목적에 맞게 모든 컴포넌트가 재활용할 수 있는 기능 모음
+
+  - hook의 필수조건
+  -- 함수이름이 무조건 use키워드로 시작
+  -- hook안에서는 다른 hook을 내부에서 호출불가
+  -- 핸들러함수 안쪽에서도 hook을 호출 불가
+  -- 컴포넌트함수 루트경로에서만 호출 가능
 
 */
