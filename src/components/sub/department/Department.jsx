@@ -25,7 +25,7 @@ export default function Department() {
 					{History.map((data, idx) => {
 						return (
 							<React.Fragment key={idx}>
-								<h2>{Object.keys(data)[0]}</h2>
+								<h3>{Object.keys(data)[0]}</h3>
 								<ul>
 									{Object.values(data)[0].map((val, idx) => (
 										<li key={idx}>{val}</li>
@@ -40,17 +40,19 @@ export default function Department() {
 			<section id='memberBox'>
 				<h2>{Title.charAt(0).toUpperCase() + Title.slice(1)}</h2>
 
-				{Department.map((member, idx) => {
-					return (
-						<article key={idx}>
-							<div className='pic'>
-								<img src={`${path}/img/${member.pic}`} alt={member.name} />
-							</div>
-							<h3>{member.name}</h3>
-							<p>{member.position}</p>
-						</article>
-					);
-				})}
+				<div className='con'>
+					{Department.map((member, idx) => {
+						return (
+							<article key={idx}>
+								<div className='pic'>
+									<img src={`${path}/img/${member.pic}`} alt={member.name} />
+								</div>
+								<h3>{member.name}</h3>
+								<p>{member.position}</p>
+							</article>
+						);
+					})}
+				</div>
 			</section>
 		</Layout>
 	);
