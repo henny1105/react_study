@@ -3,8 +3,9 @@ import './Layout.scss';
 import { useEffect, useRef } from 'react';
 
 export default function Layout({ children, title }) {
-	const refTitle = useRef(null);
 	let newClass = title.toLowerCase().split(' ').join('_');
+	const refFrame = useRef(null);
+	const refTitle = useRef(null);
 
 	useEffect(() => {
 		let text = refTitle.current.innerText;
@@ -16,11 +17,16 @@ export default function Layout({ children, title }) {
 			count++;
 		}
 		refTitle.current.innerHTML = tags;
+
+		setTimeout(() => {
+			refFrame.current.classList.add('on');
+		}, 300);
 	}, []);
 
 	return (
-		<section className={clsx('layout', newClass)}>
+		<section ref={refFrame} className={clsx('layout', newClass)}>
 			<h1 ref={refTitle}>{title}</h1>
+			<div className='bar'></div>
 			{children}
 		</section>
 	);
